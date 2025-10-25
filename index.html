@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Satyam Bhandi — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <nav id="navbar" class="nav">
+    
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-inner container">
+      <div class="intro">
+        <h1 class="title">Hey — I’m <span class="name">Satyam Bhandi</span></h1>
+        <p class="subtitle">Web Developer</p>
+        <p class="typewriter"><span id="typewriter"></span><span class="cursor">|</span></p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:bhandisatyam@gmail.com">Contact Me</a>
+          <a class="btn ghost" href="https://github.com/418satyam" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="about container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text card">
+          <p>Hi — I'm <strong>Satyam Bhandi</strong>. I build clean, responsive websites and small web apps. I enjoy learning new stacks and turning ideas into working products. I focus on HTML, CSS, JavaScript, and a bit of TypeScript,React, Node.js and Python.</p>
+          <p>Email: <a href="mailto:bhandisatyam@gmail.com">bhandisatyam@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/satyam-bhandi-60909a252/" target="_blank">Satyam Bhandi</a></p>
+        </div>
+        <div class="about-stats card">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Projects on GitHub: <a href="https://github.com/418satyam" target="_blank">418satyam</a></li>
+            <li>Languages: HTML, CSS, JS, TypeScript, Python</li>
+            <li>Focus: Responsive UI, animations, clean code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid" id="projectsGrid">
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-card card">
+          <h3>Get in touch</h3>
+          <p>Email me at <a href="mailto:bhandisatyam@gmail.com">bhandisatyam@gmail.com</a> or message me on LinkedIn.</p>
+          <div class="socials">
+            <a class="social" href="https://github.com/418satyam" target="_blank">GitHub</a>
+            <a class="social" href="https://www.linkedin.com/in/satyam-bhandi-60909a252/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+        <form class="contact-form card" id="contactForm" onsubmit="return false;">
+          <label>
+            <span>Name</span>
+            <input id="cname" type="text" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input id="cemail" type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea id="cmessage" placeholder="Say hi..." required></textarea>
+          </label>
+          <div class="form-actions">
+            <button id="sendBtn" class="btn primary">Send (opens email)</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Satyam Bhandi</div>
+      <div class="footer-links">
+        <a href="https://github.com/418satyam" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/satyam-bhandi-60909a252/" target="_blank">LinkedIn</a>
+        <a href="mailto:bhandisatyam@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-panel">
+      <button id="modalClose" class="modal-close" aria-label="Close">×</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div id="modalLinks"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
